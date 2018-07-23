@@ -1,5 +1,7 @@
 <!doctype html>
 <html lang="en">
+<!-- https://cssgradient.io/ -->
+<!-- http://www.color-hex.com/color-palette/2644 -->
 
 <head>
     <!-- Required meta tags -->
@@ -19,32 +21,30 @@
             margin: 0;
             width: 95%;
             background-color: #fcfcfc;
-            background-image: url('assets/img/fondo.jpg');
-            color: #fcfcfc;
-            background-attachment: fixed;
-            background-position: center;
-            background-repeat: no-repeat;
-            background-size: cover;
         }
 
         .btn-success {
-            background-color: #1eff8e;
-            color: black;
+            background-color: #0d6436;
+            background-image: linear-gradient(30deg, #0d6436 0%, #53b848 50%, #61dc78 100%);
+            color: white;
         }
 
         .btn-success:hover {
-            background-color: #1eff8e;
-            color: black;
+            background-color: #53b848;
+            background-image: linear-gradient(30deg, #0d6436 0%, #53b848 50%, #61dc78 100%);
+            color: white;
         }
 
         .btn-success:active {
-            background-color: #20e683 !important;
+            background-color: #53b848 !important;
+            background-image: linear-gradient(30deg, #0d6436 0%, #53b848 50%, #61dc78 100%);
             color: #fcfcfc !important;
         }
 
         .btn-success:focus {
-            background-color: #1eff8e;
-            color: black;
+            background-color: #0d6436;
+            background-image: linear-gradient(30deg, #0d6436 0%, #53b848 50%, #61dc78 100%);
+            color: white;
         }
     </style>
 </head>
@@ -53,7 +53,7 @@
     <div class="cointainer-fluid ">
         <div class="row">
             <div class="col-md-12">
-                <h1 class="text-center text-uppercase mt-1 font-weight-bold" style="color:#799F37;text-shadow: 0.4px 0.7px #e0e0e0;">¡Todos por una ciudad más verde!</h1>
+                <h1 class="text-center text-uppercase mt-1 font-weight-bold" style="  background: -webkit-linear-gradient(0deg, #53b848 0%, #0d6436 100%);-webkit-background-clip: text;-webkit-text-fill-color: transparent;">¡Todos por una ciudad más verde!</h1>
             </div>
             <div class="col-md-6 col-sm-8">
                 <!-- 4:3 aspect ratio -->
@@ -71,7 +71,7 @@
             </div>
             <div class="col-md-4 col-sm-4">
                 <article style="margin-top: 1em;">
-                    <div style="background-color: black;z-index: -200px;padding: 20px;border-radius: 10px;opacity: 0.8;">
+                    <div style="z-index: -200px;padding: 10px;border-radius: 30px;color:#000;border:.4px solid black">
                         <img class="img-fluid d-flex mx-auto" src="assets/img/logo.png">
                         <h1 class="text-center mt-4 font-weight-bold">R3CHAPPI</h1>
                         <p class="text-justify">
@@ -82,10 +82,11 @@
                         <p class="text-center underline">
                             <u>Descargala Ahora</u>
                         </p>
-                        <button class="btn btn-lg btn-success d-flex mx-auto animated infinite pulse delay-1s" style="border-radius: 10px;">
-                            Descargar
-                        </button>
+
                     </div>
+                    <button class="btn btn-lg btn-success d-flex mx-auto animated infinite pulse delay-1s mt-3" style="border-radius: 10px;">
+                        Descargar
+                    </button>
 
                 </article>
 
