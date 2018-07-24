@@ -12,64 +12,75 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B"
         crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
-
+    <link rel="stylesheet" href="assets/css/fakeLoader.css">
+    <link href="https://fonts.googleapis.com/css?family=Chela+One" rel="stylesheet">
     <title>R3Chappi</title>
     <style>
         body {
-            font-family: roboto;
-            padding: 0;
+            font-family: Arial, Helvetica, sans-serif padding: 0;
             margin: 0;
             width: 95%;
             background-color: #fcfcfc;
         }
 
+        h1,
+        h4 {
+            font-family: 'Chela One', cursive;
+        }
+
         .btn-success {
-            background-color: #0d6436;
-            background-image: linear-gradient(30deg, #0d6436 0%, #53b848 50%, #61dc78 100%);
+            background-color: #2C7744;
             color: white;
+            font-family: Arial, Helvetica, sans-serif
         }
 
         .btn-success:hover {
             background-color: #53b848;
-            background-image: linear-gradient(30deg, #0d6436 0%, #53b848 50%, #61dc78 100%);
             color: white;
+            font-family: Arial, Helvetica, sans-serif
         }
 
         .btn-success:active {
             background-color: #53b848 !important;
-            background-image: linear-gradient(30deg, #0d6436 0%, #53b848 50%, #61dc78 100%);
             color: #fcfcfc !important;
+            font-family: Arial, Helvetica, sans-serif
         }
 
         .btn-success:focus {
-            background-color: #0d6436;
-            background-image: linear-gradient(30deg, #0d6436 0%, #53b848 50%, #61dc78 100%);
+            background-color: #2C7744;
             color: white;
+            font-family: Arial, Helvetica, sans-serif
+        }
+
+        #app {
+            background: url('assets/img/fondo.jpg') no-repeat center center fixed;
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
         }
     </style>
 </head>
 
 <body>
+    <div id="fakeloader"></div>
     <div class="cointainer-fluid ">
         <div class="row">
-            <div class="col-md-12">
-                <h1 class="text-center text-uppercase mt-1 font-weight-bold" style="  background: -webkit-linear-gradient(0deg, #53b848 0%, #0d6436 100%);-webkit-background-clip: text;-webkit-text-fill-color: transparent;">¡Todos por una ciudad más verde!</h1>
-            </div>
-            <div class="col-md-6 col-sm-8">
+            <div id="app" class="col-lg-6 col-md-6 col-sm-8 d-flex justify-content-center align-items-center " style="height: 100vh;">
                 <!-- 4:3 aspect ratio -->
-                <div class="d-flex mx-auto">
-                    <div class="embed-responsive embed-responsive-1by1 ">
-                        <iframe class="embed-responsive-item" style="margin-top: 1em;width: 46%;height: 80%;border-radius: 20px;margin-left: 30vh;"
-                            src="assets/video/proto-play.mp4" name="Prototipo" scrolling="no" frameborder="0" marginheight="0px"
-                            marginwidth="0px" allowfullscreen autoplay>
-                        </iframe>
-                    </div>
+
+                <div class="embed-responsive embed-responsive-1by1 ">
+                    <!-- width: 46%;height: 80%; -->
+                    <iframe class="embed-responsive-item " style="border-radius: 20px;" src="assets/video/proto-play.mp4" name="Prototipo" scrolling="no"
+                        frameborder="0" marginheight="0px" marginwidth="0px" allowfullscreen autoplay>
+                    </iframe>
                 </div>
+
                 <!-- <iframe class="d-flex mx-auto" src="https://c0der97.github.io/Proyecto/prototipo/index.html" style="border:0px #ffffff none;"
                     name="Prototipo" scrolling="no" frameborder="1" marginheight="0px" marginwidth="0px" height="667px" width="375px"
                     allowfullscreen></iframe> -->
             </div>
-            <div class="col-md-4 col-sm-4">
+            <div class="col-md-4 col-sm-4 col-lg-6">
                 <article style="margin-top: 1em;">
                     <div style="z-index: -200px;padding: 10px;border-radius: 30px;color:#000;border:.4px solid black">
                         <img class="img-fluid d-flex mx-auto" src="assets/img/logo.png">
@@ -79,6 +90,8 @@
                             <br>
                             <br> Es una app movil Hibrida que te enseñara a reciclar. </p>
                         <p>¿Quieres saber más? </p>
+                        <h4 class="text-center text-uppercase mt-1 font-weight-bold" style="  background: -webkit-linear-gradient(0deg, #53b848 0%, #0d6436 100%);-webkit-background-clip: text;-webkit-text-fill-color: transparent;">¡Todos por una ciudad más verde!</h4>
+
                         <p class="text-center underline">
                             <u>Descargala Ahora</u>
                         </p>
@@ -97,8 +110,16 @@
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
         crossorigin="anonymous"></script>
+    <script src="assets/js/fakeLoader.min.js"></script>
+    <script type="text/javascript">
+        $("#fakeloader").fakeLoader({
+            timeToHide: 1500,
+            bgColor: "#0d6436",
+            spinner: "spinner6"
+        });
+    </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
         crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js" integrity="sha384-o+RDsa0aLu++PJvFqy8fFScvbHFLtbvScb8AjopnFD+iEQ7wo/CG0xlczd+2O/em"
